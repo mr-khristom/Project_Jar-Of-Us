@@ -1,8 +1,11 @@
+
 import { GoogleGenAI } from "@google/genai";
 
 // Initialize Gemini AI
-// NOTE: process.env.API_KEY must be available.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || 'dummy_key' });
+// Support both Vite (import.meta.env) and standard process.env
+const apiKey = (import.meta as any).env?.VITE_API_KEY || process.env.API_KEY || 'dummy_key';
+
+const ai = new GoogleGenAI({ apiKey });
 
 export const enhanceMemoryText = async (originalText: string): Promise<string> => {
   if (!originalText.trim()) return "";
