@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Jar of Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              love: {
+                50: '#fff0f3',
+                100: '#ffe3e8',
+                200: '#ffc9d6',
+                300: '#ff9fb8',
+                400: '#ff6b93',
+                500: '#f43f6e',
+                600: '#e11d53',
+                700: '#be1241',
+                800: '#9f123a',
+                900: '#881337',
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'wiggle': 'wiggle 1s ease-in-out infinite',
+              'shake-hard': 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both',
+              'fade-in': 'fadeIn 1s ease-out forwards',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              },
+              shake: {
+                '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+                '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+                '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+                '40%, 60%': { transform: 'translate3d(4px, 0, 0)' }
+              },
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for modals */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e11d53;
+        border-radius: 10px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-love-50 text-slate-800 overflow-hidden h-screen w-screen touch-none select-none">
+    <div id="root"></div>
+  </body>
+</html>
