@@ -1,0 +1,7 @@
+{
+  "name": "Jar of Us",
+  "description": "A digital memory jar. Shake to reveal a cherished memory. Admin interface included for content management.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
