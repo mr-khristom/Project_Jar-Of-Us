@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { uploadMemory } from '../services/firebase';
 import { enhanceMemoryText } from '../services/gemini';
 import { getDirectImgurUrl } from '../services/utils';
-import { Wand2, Save, Check, Loader2, Image as ImageIcon, LogOut, Calendar, AlertTriangle, Link } from 'lucide-react';
+import { Wand2, Save, Check, Loader2, LogOut, Calendar, AlertTriangle, Link } from 'lucide-react';
 
 interface AdminViewProps {
   onBack: () => void;

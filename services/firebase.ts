@@ -91,7 +91,7 @@ export const getDailyStatus = (): DailyStatus => {
 const initializeStore = async (): Promise<Memory[]> => {
   try {
     // Try to fetch the storage.json file
-    const response = await fetch('storage.json');
+    const response = await fetch(`${import.meta.env.BASE_URL}storage.json`);
     if (!response.ok) throw new Error("No seed file found");
     
     const seedData = await response.json();
